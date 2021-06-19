@@ -10,6 +10,10 @@
 		00FCAD069E5002FA95B20558 /* Pods_MyRxSwiftCollection_MyRxSwiftCollectionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2DA97F4A48C840D6CEE4D0 /* Pods_MyRxSwiftCollection_MyRxSwiftCollectionUITests.framework */; };
 		957D37C5D42FE17A53C42BF7 /* Pods_MyRxSwiftCollectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41183FC20058FFAAF8F84301 /* Pods_MyRxSwiftCollectionTests.framework */; };
 		B0C076F9AA611A77EA672291 /* Pods_MyRxSwiftCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6088B2B92466AE80EFDF3142 /* Pods_MyRxSwiftCollection.framework */; };
+		F208F7C7267DAADF00121FC8 /* AnimatedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F208F7C4267DAADF00121FC8 /* AnimatedViewController.xib */; };
+		F208F7C8267DAADF00121FC8 /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208F7C5267DAADF00121FC8 /* AnimatedViewController.swift */; };
+		F208F7C9267DAADF00121FC8 /* AnimatedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208F7C6267DAADF00121FC8 /* AnimatedTableViewCell.swift */; };
+		F208F7CB267DAC5200121FC8 /* AnimatedCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F208F7CA267DAC5200121FC8 /* AnimatedCellData.swift */; };
 		F290B082267CAFCB0052AF3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F290B081267CAFCB0052AF3F /* AppDelegate.swift */; };
 		F290B086267CAFCB0052AF3F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F290B085267CAFCB0052AF3F /* MainViewController.swift */; };
 		F290B089267CAFCB0052AF3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F290B087267CAFCB0052AF3F /* Main.storyboard */; };
@@ -52,6 +56,10 @@
 		B7AE1669F6C030F74469A208 /* Pods-MyRxSwiftCollection-MyRxSwiftCollectionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRxSwiftCollection-MyRxSwiftCollectionUITests.release.xcconfig"; path = "Target Support Files/Pods-MyRxSwiftCollection-MyRxSwiftCollectionUITests/Pods-MyRxSwiftCollection-MyRxSwiftCollectionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C2B66BE940CBC54D0E93BAFA /* Pods-MyRxSwiftCollectionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRxSwiftCollectionTests.debug.xcconfig"; path = "Target Support Files/Pods-MyRxSwiftCollectionTests/Pods-MyRxSwiftCollectionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E70CFD58D6E6258866AFED5D /* Pods-MyRxSwiftCollectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRxSwiftCollectionTests.release.xcconfig"; path = "Target Support Files/Pods-MyRxSwiftCollectionTests/Pods-MyRxSwiftCollectionTests.release.xcconfig"; sourceTree = "<group>"; };
+		F208F7C4267DAADF00121FC8 /* AnimatedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimatedViewController.xib; sourceTree = "<group>"; };
+		F208F7C5267DAADF00121FC8 /* AnimatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedViewController.swift; sourceTree = "<group>"; };
+		F208F7C6267DAADF00121FC8 /* AnimatedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTableViewCell.swift; sourceTree = "<group>"; };
+		F208F7CA267DAC5200121FC8 /* AnimatedCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCellData.swift; sourceTree = "<group>"; };
 		F25FB92069DF1028B7540441 /* Pods-MyRxSwiftCollection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRxSwiftCollection.debug.xcconfig"; path = "Target Support Files/Pods-MyRxSwiftCollection/Pods-MyRxSwiftCollection.debug.xcconfig"; sourceTree = "<group>"; };
 		F290B07E267CAFCB0052AF3F /* MyRxSwiftCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRxSwiftCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F290B081267CAFCB0052AF3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +134,17 @@
 				41183FC20058FFAAF8F84301 /* Pods_MyRxSwiftCollectionTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F208F7C3267DAA3900121FC8 /* AnimatedDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F208F7C6267DAADF00121FC8 /* AnimatedTableViewCell.swift */,
+				F208F7C5267DAADF00121FC8 /* AnimatedViewController.swift */,
+				F208F7C4267DAADF00121FC8 /* AnimatedViewController.xib */,
+				F208F7CA267DAC5200121FC8 /* AnimatedCellData.swift */,
+			);
+			path = AnimatedDataSource;
 			sourceTree = "<group>";
 		};
 		F290B075267CAFCB0052AF3F = {
@@ -205,6 +224,7 @@
 		F290B0B7267CC02F0052AF3F /* ExampleScenes */ = {
 			isa = PBXGroup;
 			children = (
+				F208F7C3267DAA3900121FC8 /* AnimatedDataSource */,
 				F290B0B8267CC03D0052AF3F /* Search */,
 			);
 			path = ExampleScenes;
@@ -348,6 +368,7 @@
 				F290B08E267CAFD20052AF3F /* LaunchScreen.storyboard in Resources */,
 				F290B08B267CAFD20052AF3F /* Assets.xcassets in Resources */,
 				F290B0BC267CC06C0052AF3F /* SearchViewController.xib in Resources */,
+				F208F7C7267DAADF00121FC8 /* AnimatedViewController.xib in Resources */,
 				F290B089267CAFCB0052AF3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,11 +499,14 @@
 			files = (
 				F290B0BB267CC06C0052AF3F /* SearchViewController.swift in Sources */,
 				F290B0C6267CC7320052AF3F /* UIViewController + Extensions.swift in Sources */,
+				F208F7CB267DAC5200121FC8 /* AnimatedCellData.swift in Sources */,
 				F290B0C3267CC6030052AF3F /* MainCoordinator.swift in Sources */,
 				F290B086267CAFCB0052AF3F /* MainViewController.swift in Sources */,
+				F208F7C9267DAADF00121FC8 /* AnimatedTableViewCell.swift in Sources */,
 				F290B0B3267CB45E0052AF3F /* MainTableViewCell.swift in Sources */,
 				F290B082267CAFCB0052AF3F /* AppDelegate.swift in Sources */,
 				F290B0B6267CBB330052AF3F /* MyConstant.swift in Sources */,
+				F208F7C8267DAADF00121FC8 /* AnimatedViewController.swift in Sources */,
 				F290B0BF267CC25B0052AF3F /* BaseViewController.swift in Sources */,
 				F290B0C1267CC3B30052AF3F /* SearchTableViewCell.swift in Sources */,
 			);

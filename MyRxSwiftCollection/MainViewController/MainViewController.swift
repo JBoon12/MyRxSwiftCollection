@@ -12,11 +12,12 @@ import RxCocoa
 class MainViewController: BaseViewController {
     @IBOutlet weak var mainTableView: UITableView!
     
-    var items: [String] = {
-        return ["Rx로 검색 구현"]
+    var items: [CoordinatorViewType] = {
+        return [.searchViewController,
+                .animatedViewController]
     }()
     
-    lazy var dataSource = BehaviorRelay<[String]>(value: items)
+    lazy var dataSource = BehaviorRelay<[CoordinatorViewType]>(value: items)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,7 @@ class MainViewController: BaseViewController {
                     return UITableViewCell()
                 }
                 
-                cell.title = element
+                cell.coordinatorType = element
                 
                 return cell
             }
@@ -47,11 +48,12 @@ class MainViewController: BaseViewController {
     override func bindingAction() {
         Observable.zip(
             mainTableView.rx.itemSelected,
-            mainTableView.rx.modelSelected(String.self)
+            mainTableView.rx.modelSelected(CoordinatorViewType.self)
         )
         .subscribe(onNext:{[weak self] indexPath, title in
             self?.mainTableView.deselectRow(at: indexPath, animated: true)
-            MainCoordinator.searchViewStart()
+            let cell = self?.mainTableView.cellForRow(at: indexPath) as? MainTableViewCell
+            cell?.coordinatorType?.go()
         })
         .disposed(by: disposeBag)
     }

@@ -1,25 +1,25 @@
 //
-//  MainTableViewCell.swift
+//  AnimatedTableViewCell.swift
 //  MyRxSwiftCollection
 //
-//  Created by Jinseok Hwang on 2021/06/18.
+//  Created by Jinseok Hwang on 2021/06/19.
 //
 
 import UIKit
 import SnapKit
 
-class MainTableViewCell: UITableViewCell {
-    
+class AnimatedTableViewCell: UITableViewCell {
+
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .body)
         label.adjustsFontForContentSizeCategory = true
         return label
     }()
-        
-    var coordinatorType: CoordinatorViewType? {
-        didSet{
-            titleLabel.text = coordinatorType?.cellTitle
+    
+    var title: NSAttributedString? {
+        didSet {
+            titleLabel.attributedText = title ?? NSAttributedString(string: "")
         }
     }
     
@@ -32,6 +32,8 @@ class MainTableViewCell: UITableViewCell {
             $0.top.bottom.left.right.equalToSuperview().inset(15)
         }
     }
+    
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
