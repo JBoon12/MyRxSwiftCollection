@@ -25,11 +25,21 @@ struct MainCoordinator {
             .navigationController?
             .pushViewController(vc, animated: true)
     }
+    
+    static func carouselViewStart() {
+        let vc = CarouselViewController(nibName: MyViewControllerType.CAROUSEL_VIEW_IDENTIFIER,
+                                        bundle: nil)
+        
+        UIViewController.topViewController?
+            .navigationController?
+            .pushViewController(vc, animated: true)
+    }
 }
 
 enum CoordinatorViewType: String {
     case searchViewController
     case animatedViewController
+    case carouselViewController
 }
 
 extension CoordinatorViewType {
@@ -39,6 +49,8 @@ extension CoordinatorViewType {
             MainCoordinator.searchViewStart()
         case .animatedViewController:
             MainCoordinator.animatedViewStart()
+        case .carouselViewController:
+            MainCoordinator.carouselViewStart()
         }
     }
     
@@ -48,6 +60,8 @@ extension CoordinatorViewType {
             return "Rx로 검색 구현"
         case .animatedViewController:
             return "Rx로 Animated Cell"
+        case .carouselViewController:
+            return "Carousel 구현해보기"
         }
     }
 }

@@ -64,6 +64,7 @@ class AnimatedViewController: BaseViewController {
     }
     
     override func setUI() {
+        
         searchTableView.register(AnimatedTableViewCell.self,
                                  forCellReuseIdentifier: MyCellType.ANIMATED_CELL_IDENTIFIER)
         searchTableView.tableFooterView = UIView(frame: .zero)

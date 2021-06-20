@@ -14,7 +14,8 @@ class MainViewController: BaseViewController {
     
     var items: [CoordinatorViewType] = {
         return [.searchViewController,
-                .animatedViewController]
+                .animatedViewController,
+                .carouselViewController]
     }()
     
     lazy var dataSource = BehaviorRelay<[CoordinatorViewType]>(value: items)

@@ -29,6 +29,9 @@
 		F290B0C1267CC3B30052AF3F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F290B0C0267CC3B30052AF3F /* SearchTableViewCell.swift */; };
 		F290B0C3267CC6030052AF3F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F290B0C2267CC6030052AF3F /* MainCoordinator.swift */; };
 		F290B0C6267CC7320052AF3F /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F290B0C5267CC7320052AF3F /* UIViewController + Extensions.swift */; };
+		F2E0E78B267F33380017003C /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0E789267F33380017003C /* CarouselViewController.swift */; };
+		F2E0E78C267F33380017003C /* CarouselViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E0E78A267F33380017003C /* CarouselViewController.xib */; };
+		F2E0E78E267F37B60017003C /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0E78D267F37B60017003C /* CarouselCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		F290B0C0267CC3B30052AF3F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		F290B0C2267CC6030052AF3F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		F290B0C5267CC7320052AF3F /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
+		F2E0E789267F33380017003C /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		F2E0E78A267F33380017003C /* CarouselViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselViewController.xib; sourceTree = "<group>"; };
+		F2E0E78D267F37B60017003C /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE2DA97F4A48C840D6CEE4D0 /* Pods_MyRxSwiftCollection_MyRxSwiftCollectionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyRxSwiftCollection_MyRxSwiftCollectionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -224,6 +230,7 @@
 		F290B0B7267CC02F0052AF3F /* ExampleScenes */ = {
 			isa = PBXGroup;
 			children = (
+				F2E0E780267F325B0017003C /* Carousel */,
 				F208F7C3267DAA3900121FC8 /* AnimatedDataSource */,
 				F290B0B8267CC03D0052AF3F /* Search */,
 			);
@@ -255,6 +262,16 @@
 				F290B0C5267CC7320052AF3F /* UIViewController + Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F2E0E780267F325B0017003C /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				F2E0E789267F33380017003C /* CarouselViewController.swift */,
+				F2E0E78A267F33380017003C /* CarouselViewController.xib */,
+				F2E0E78D267F37B60017003C /* CarouselCollectionViewCell.swift */,
+			);
+			path = Carousel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +384,7 @@
 			files = (
 				F290B08E267CAFD20052AF3F /* LaunchScreen.storyboard in Resources */,
 				F290B08B267CAFD20052AF3F /* Assets.xcassets in Resources */,
+				F2E0E78C267F33380017003C /* CarouselViewController.xib in Resources */,
 				F290B0BC267CC06C0052AF3F /* SearchViewController.xib in Resources */,
 				F208F7C7267DAADF00121FC8 /* AnimatedViewController.xib in Resources */,
 				F290B089267CAFCB0052AF3F /* Main.storyboard in Resources */,
@@ -497,8 +515,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E0E78E267F37B60017003C /* CarouselCollectionViewCell.swift in Sources */,
 				F290B0BB267CC06C0052AF3F /* SearchViewController.swift in Sources */,
 				F290B0C6267CC7320052AF3F /* UIViewController + Extensions.swift in Sources */,
+				F2E0E78B267F33380017003C /* CarouselViewController.swift in Sources */,
 				F208F7CB267DAC5200121FC8 /* AnimatedCellData.swift in Sources */,
 				F290B0C3267CC6030052AF3F /* MainCoordinator.swift in Sources */,
 				F290B086267CAFCB0052AF3F /* MainViewController.swift in Sources */,
